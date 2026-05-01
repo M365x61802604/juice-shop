@@ -79,7 +79,7 @@ describe('OAuthComponent', () => {
   }))
 
   it('will create regular user account with base64 encoded reversed email as password', fakeAsync(() => {
-    userService.oauthLogin.and.returnValue(of({ email: 'test@test.com' }))
+    userService.oauthLogin.and.returnValue(of({ email: 'test1@test.com' }))
     component.ngOnInit()
     expect(userService.save).toHaveBeenCalledWith({ email: 'test@test.com', password: 'bW9jLnRzZXRAdHNldA==', passwordRepeat: 'bW9jLnRzZXRAdHNldA==' })
   }))
